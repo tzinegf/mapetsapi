@@ -13,6 +13,6 @@ export class CreateUserDto {
     phone: string;
     @IsString()
     email: string;
-    @IsString()
+    @IsString({ each: true })
     address: string[];
 }
