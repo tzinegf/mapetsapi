@@ -42,15 +42,16 @@ export class PetsService {
     findOne(id:string){
         const pet = this.pets.find(pet => pet.id === Number(id));
         if(!pet){
-        throw new HttpException(`Pet ID:#${pet.id} not found`, HttpStatus.NOT_FOUND);
+        throw new HttpException(`Pet ID:#${id} not found`, HttpStatus.NOT_FOUND);
 
         }
-          return this.pets.find(pet => pet.id === Number(id));
+          return pet;
        
     }
 
     create(createPetDTO: any){
-        return this.pets.push(createPetDTO);
+         this.pets.push(createPetDTO);
+         return createPetDTO;
     }
     update(id:string, updatePetDTO: any){
         const indexPet = this.pets.findIndex(pet => pet.id === Number(id));

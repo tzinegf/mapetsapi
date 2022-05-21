@@ -1,4 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import { CreatePetDto } from './dto/create-pet.dto';
+import { UpdatePetDto } from './dto/update-pet.dto';
 import { PetsService } from './pets.service';
 
 @Controller('pets')
@@ -15,8 +17,8 @@ export class PetsController {
         return this.petsService.findOne(id);
     }
     @Post()
-    create(@Body() body)  {
-        return this.petsService.create(body);
+    create(@Body() createPetDto: CreatePetDto)  {
+        return this.petsService.create(createPetDto);
     }
 
     // @Patch(':id')
@@ -26,8 +28,8 @@ export class PetsController {
     // }
 
     @Put(':id')
-    updateAll(@Param('id') id:string, @Body() body) {
-        return this.petsService.update(id, body);
+    updateAll(@Param('id') id:string, @Body() updatePetDto:UpdatePetDto) {
+        return this.petsService.update(id, updatePetDto);
     }
     
     @Delete(':id')
