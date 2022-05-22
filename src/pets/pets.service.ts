@@ -8,7 +8,7 @@ export class PetsService {
         {
             id: 1,
             name: 'Max',
-            weight: 'dog',
+            weight: '10',
             age: 5,
             breed: 'labrador',
             description: 'Max is a very good dog',
@@ -23,7 +23,7 @@ export class PetsService {
         {
             id: 2,
             name: 'Caramelo',
-            weight: 'dog',
+            weight: '12',
             age: 11,
             breed: 'vira-lata',
             description: 'Caramelo is a very bad dog',
