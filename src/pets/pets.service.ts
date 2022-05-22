@@ -13,7 +13,7 @@ export class PetsService {
             breed: 'labrador',
             description: 'Max is a very good dog',
             especies: 'dog',
-            gender: 'dog',
+            gender: 'male',
             mainColor:'black',
             image:  'https://www.petz.com.br/cachorro/racas/labrador/img/labrador-caracteristicas-guia-racas.jpg'
             
@@ -28,7 +28,7 @@ export class PetsService {
             breed: 'vira-lata',
             description: 'Caramelo is a very bad dog',
             especies: 'dog',
-            gender: 'dog',
+            gender: 'male',
             mainColor:'caramelo',
             image:  'https://www.hypeness.com.br/1/2019/09/Vira-lata_Caramelo_1.jpg'
             
